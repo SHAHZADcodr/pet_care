@@ -1,0 +1,96 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-background-color:rgb(236, 139, 155);
+    --bg--body-color:rgb(250, 189, 199);
+}
+/* Basic Layout */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures body takes full height of the viewport */
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #ffcc00;
+    height:6vh;
+    display:flex;
+    align-items:center;
+   
+}
+#webName{
+    font-size: 1.2rem;
+    margin-left:8%;
+}
+
+.dog-breeds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    flex-grow: 1; /* Allows the main content to grow and push footer down */
+}
+
+.dog-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    width: 100%; /* Full width on small screens */
+    max-width: 250px; /* Maximum width for larger screens */
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.dog-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.dog-card img {
+    width: 100%; /* Ensure image takes full width of the card */
+    height: auto; /* Maintain aspect ratio without cutting off */
+    max-height: 150px; /* Set a max height to ensure consistency */
+    object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
+}
+
+ul {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px; /* Indent the list */
+    text-align: left; /* Align text to the left */
+}
+
+footer {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .dog-card {
+        max-width: 90%; /* Wider cards on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Smaller font size for header on small screens */
+    }
+
+    .dog-card {
+        max-width: 100%; /* Full width for small screens */
+    }
+
+    .dog-card img {
+        max-height: 120px; /* Adjust image height for small screens */
+    }
+}

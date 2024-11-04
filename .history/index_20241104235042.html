@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <title>www.petNest.com/</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Popup div -->
+      <div id="welcome-popup" class="popup">
+        <div class="popup-content">
+            <h2>H, welcome to PetNest!</h2>
+            <p>Your one-stop place for pet care tips and information.</p>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <h1 id="webName"><i><strong>petNest</strong></i></h1>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/dog.html">Dogs</a></li>
+                <li><a href="pages/cat.html">Cats</a></li>
+                <li><a href="pages/bird.html">Birds</a></li>
+                <li><a href="pages/tips.html">Tips</a></li>
+                <li><a href="pages/contact.html" id="you">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="welcome-text">
+               <marquee behavior="alternate" direction="right"> <h2>Welcome to petNest Tips</h2></marquee>
+                <p>Your ultimate guide to taking care of your beloved pets!</p>
+            </div>
+        </section>
+
+        <section class="categories-slider">
+            <div class="slider-container">
+                <div class="category-card">
+                    <img src="images/my_dog.jpg" alt="Dog">
+                    <a href="pages/dog.html">Dogs</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/catimage.jpg" alt="Cat">
+                    <a href="pages/cat.html">Cats</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/main_bird.jpeg" alt="Bird">
+                    <a href="pages/bird.html">Birds</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 petNest Tips.  &hearts; Aashiya Khatoon &hearts;</p>
+    </footer>
+
+    <script src="code.js"></script>
+</body>
+</html>

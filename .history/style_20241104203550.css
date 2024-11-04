@@ -1,0 +1,89 @@
+/* Slider Container */
+.categories-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* This will help in centering three cards in the slider */
+.slider-container {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.4s ease;
+    width: calc(200px * 3); /* Width for 3 cards */
+}
+
+/* Individual Cards */
+.category-card {
+    min-width: 200px; /* Ensure cards have a minimum width */
+    max-width: 200px; /* Ensure cards have a maximum width */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex-shrink: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+}
+
+.category-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.category-card a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.3rem;
+    border-radius: 5px;
+    display: block;
+    margin-top: -30px;
+}
+
+/* Style to focus on the center image */
+.slider-container {
+    display: flex; /* Make sure cards are in a row */
+    transition: transform 0.5s ease; /* Smooth transition for the slider */
+    overflow: hidden; /* Hide overflowing content */
+    width: calc(200px * 3); /* Set full width for 3 visible cards */
+}
+
+/* Optional: Navigation Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-card {
+        min-width: 150px; /* Adjust card sizes for medium screens */
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-card {
+        min-width: 120px; /* Adjust card sizes for small screens */
+        max-width: 120px;
+    }
+}

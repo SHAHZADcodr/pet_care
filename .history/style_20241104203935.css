@@ -1,0 +1,189 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Layout */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #f8b400;
+    padding: 1rem;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Header Title Styling */
+h1 {
+    font-size: 1.5rem;
+}
+
+/* Styling for Welcome Section */
+.welcome-text {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 600px;
+    max-height:200px;
+    min-height: 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+/* Slider Container */
+.categories-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* This will help in centering three cards in the slider */
+.slider-container {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.4s ease;
+    width: auto; /* Allow it to be wider than the viewport */
+}
+
+/* Individual Cards */
+.category-card {
+    min-width: 200px; /* Ensure cards have a minimum width */
+    max-width: 200px; /* Ensure cards have a maximum width */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex-shrink: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+}
+
+/* Style for the images */
+.category-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Link styling for category cards */
+.category-card a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.3rem;
+    border-radius: 5px;
+    display: block;
+    margin-top: -30px;
+}
+
+/* Center Image Focus Effect */
+.category-card.focus {
+    transform: scale(1.2); /* Enlarge the center card */
+    opacity: 1; /* Make it fully opaque */
+}
+
+.category-card.adjacent {
+    transform: scale(1.05); /* Slightly enlarge adjacent cards */
+    opacity: 0.8; /* Dim adjacent cards */
+}
+
+.category-card:not(.focus):not(.adjacent) {
+    opacity: 0.5; /* Dim non-adjacent cards */
+}
+
+/* Optional: Navigation Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust header and navigation */
+    header {
+        padding: 1rem;
+        text-align: center;
+        display:none;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    /* Center the header title and adjust size */
+    h1 {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+    .category-card {
+        min-width: 150px;
+        max-width: 150px;
+    }
+ 
+}
+
+@media (max-width: 480px) {
+    .category-card {
+        min-width: 120px;
+        max-width: 120px;
+    }
+}
+

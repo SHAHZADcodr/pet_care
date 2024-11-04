@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-background-color:rgb(236, 139, 155);
+    --bg--body-color:rgb(250, 189, 199);
+}
+/* Basic Layout */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures body takes full height of the viewport */
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color:var(--bg-background-color);
+    padding: 1rem;
+    color: black;;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+#nav-links a {
+    color:black;
+    text-decoration: none;
+    font-size:0.9rem;
+    font-weight: 600;
+    transition:color 0.2s;
+}
+#nav-links a:hover{
+    color:white!important;
+}
+
+ #nav-links  #you{
+    cursor:url(/images/cursor.svg)3 3,auto !important;
+}
+/*Website name*/
+#webName{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#webName:hover{
+    color:aliceblue;
+}
+
+
+.contact-page {
+    flex-grow: 1; /* Allows the main content to grow and push footer down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 300px; /* Fixed width for contact card */
+    text-align: center;
+}
+
+.contact-card h2 {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e0b800; /* Darken button on hover */
+}
+
+footer {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-card {
+        width: 90%; /* Full width on small screens */
+    }
+}
